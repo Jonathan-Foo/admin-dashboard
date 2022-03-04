@@ -13,7 +13,7 @@
 body {
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 16vw 1fr;
+  grid-template-columns: 12.5em 1fr;
   grid-template-rows: 1fr 5fr;
   grid-template-areas:
     "sidebar header"
@@ -85,7 +85,7 @@ input[type="search"] {
   background: var(--secondary-color);
   border: none;
   border-radius: 50px;
-  width: 45em;
+  width: 50vw;
   height: 2.2em;
 }
 
@@ -108,10 +108,11 @@ input[type="search"] {
 
 .nav > ul {
   display: flex;
-  gap: 2em;
+  gap: 2vw;
   justify-content: center;
   align-items: center;
   font-size: 0.8em;
+  flex-wrap: wrap;
   /* border: 1px solid red; */
 }
 
@@ -119,6 +120,7 @@ input[type="search"] {
   width: 3em;
   height: auto;
   border-radius: 50%;
+  border: 2px solid var(--secondary-color);
 }
 
 .profile-image.small {
@@ -139,8 +141,8 @@ input[type="search"] {
   font-size: 0.9em;
 }
 
-.search img:first-of-type {
-  width: 1.2em;
+.bell {
+  width: 1em;
 }
 
 /* SIDEBAR STYLING */
@@ -154,7 +156,7 @@ input[type="search"] {
   justify-content: start;
   align-items: flex-start;
   align-content: flex-start;
-  gap: 2em;
+  gap: 2.5em;
   padding: 1.5em;
   font-size: 0.8em;
 }
@@ -193,6 +195,11 @@ ul {
 .logo > img {
   width: 1.5em;
   height: auto;
+}
+
+.options > ul > li > img,
+.settings > ul > li > img {
+  width: 1.8em;
 }
 
 /* MAIN STYLING */
