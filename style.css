@@ -6,8 +6,9 @@
 }
 
 :root {
-  --main-color: #facc15;
+  --main-color: #22c55e;
   --secondary-color: #e2e8f0;
+  --card-color: #facc15;
 }
 
 body {
@@ -40,8 +41,8 @@ a {
     "search"
     "nav";
   padding: 0.5em 2.2em;
-  padding-bottom: 1.8em;
-  row-gap: 1.5em;
+  padding-bottom: 1.2em;
+  row-gap: 1.2em;
 }
 
 .nav {
@@ -207,6 +208,74 @@ ul {
 .main {
   background-color: var(--secondary-color);
   grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 22%;
+  grid-template-areas: "projects explore ";
+}
+
+.projects {
+  /* background: lightblue; */
+  padding: 1.5em 1.2em;
+}
+
+.projects > p {
+  font-size: 14px;
+  margin-bottom: 1em;
+}
+
+.explore {
+  /* background: lightgreen; */
+  padding: 1em 1.5em 1em 0;
+}
+
+.cards-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em 1em;
+}
+
+.card {
+  background: white;
+  padding: 1em;
+  padding-top: 1.5em;
+  padding-left: 2em;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  height: 10em;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px #ccc;
+  position: relative;
+  overflow: hidden;
+}
+
+.card > span {
+  position: absolute;
+  width: 1em;
+  height: 200px;
+  bottom: 0;
+  left: -5px;
+  background: var(--card-color);
+}
+
+.card-icons {
+  position: absolute;
+  display: flex;
+  gap: 1.2em;
+  bottom: 22px;
+  right: 23px;
+}
+
+.card-icons > img {
+  width: 1.3em;
+}
+
+.card > .small-text {
+  font-size: 0.85em;
+  color: #777;
+  width: 18em;
+  margin-top: 0.5em;
 }
 
 .bold {
