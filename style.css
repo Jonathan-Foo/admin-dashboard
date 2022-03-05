@@ -9,6 +9,7 @@
   --main-color: #22c55e;
   --secondary-color: #e2e8f0;
   --card-color: #facc15;
+  --subtext-color: #777;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
     "sidebar header"
     "sidebar main";
   font-family: "Roboto", sans-serif;
+  color: #333;
 }
 
 a {
@@ -88,6 +90,15 @@ input[type="search"] {
   border-radius: 50px;
   width: 50vw;
   height: 2.2em;
+  padding-inline: 1em;
+}
+
+input[type="search"]:focus {
+  outline: 1px solid var(--main-color);
+}
+
+label {
+  cursor: pointer;
 }
 
 .search-bar {
@@ -126,6 +137,7 @@ input[type="search"] {
 
 .profile-image.small {
   width: 2em;
+  cursor: pointer;
 }
 
 .nav-links {
@@ -144,6 +156,7 @@ input[type="search"] {
 
 .bell {
   width: 1em;
+  cursor: pointer;
 }
 
 /* SIDEBAR STYLING */
@@ -180,6 +193,7 @@ ul {
 .options > ul > li,
 .settings > ul > li {
   gap: 1em;
+  cursor: pointer;
 }
 
 .options > ul,
@@ -209,29 +223,29 @@ ul {
   background-color: var(--secondary-color);
   grid-area: main;
   display: grid;
-  grid-template-columns: 1fr 22%;
+  grid-template-columns: 1fr 20%;
   grid-template-areas: "projects explore ";
 }
 
 .projects {
   /* background: lightblue; */
-  padding: 1.5em 1.2em;
+  padding: 1.3em 1.2em;
 }
 
 .projects > p {
   font-size: 14px;
-  margin-bottom: 1em;
+  margin-bottom: 0.8em;
 }
 
 .explore {
   /* background: lightgreen; */
-  padding: 1em 1.5em 1em 0;
+  padding: 1.3em 1.5em 1em 0;
 }
 
 .cards-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5em 1em;
+  gap: 1.3em 1em;
 }
 
 .card {
@@ -269,15 +283,70 @@ ul {
 
 .card-icons > img {
   width: 1.3em;
+  cursor: pointer;
 }
 
 .card > .small-text {
   font-size: 0.85em;
-  color: #777;
+  color: var(--subtext-color);
   width: 18em;
   margin-top: 0.5em;
 }
 
 .bold {
   font-weight: bold;
+}
+
+.annoucements {
+  margin-bottom: 1em;
+}
+
+.announcement-info {
+  background: white;
+  border-radius: 5px;
+  font-size: 0.6em;
+  padding: 2.3em 3em;
+  box-shadow: 0px 2px 5px #ccc;
+}
+
+.announcement-info > hr {
+  background: #ccc;
+  border: none;
+  height: 0.5px;
+  margin-block: 1em;
+}
+
+.user-section {
+  background: white;
+  padding: 1em 1em;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px #ccc;
+  display: grid;
+  row-gap: 0.7em;
+}
+
+.users {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+  /* margin-bottom: 0.5em; */
+}
+
+.users > img {
+  width: 100em;
+}
+
+.bold.heading {
+  font-size: 14px;
+  margin-bottom: 0.8em;
+}
+
+.sidebar-text {
+  font-size: 0.9em;
+  color: var(--subtext-color);
+}
+
+.trending-user-info > p {
+  font-size: 0.6em;
 }
